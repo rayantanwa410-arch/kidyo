@@ -1,0 +1,20 @@
+{
+  "name": "kid-your-confidence",
+  "version": "1.0.0",
+  "description": "Kid Your Confidence - Youth-led nonprofit website",
+  "main": "app.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  },
+  "keywords": [
+    "nonprofit",
+    "youth",
+    "confidence"
+  ],
+  "author": "",
+  "license": "ISC"
+}
