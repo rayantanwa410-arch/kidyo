@@ -1182,6 +1182,98 @@ footer {
         flex-direction: column;
     }
 }
+  /* ===== MOBILE FIXES ===== */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    padding: 12px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* MAIN HEADLINE */
+  .big {
+    font-size: 32px;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  /* PARAGRAPHS */
+  .center {
+    padding: 0 15px;
+    font-size: 16px;
+  }
+
+  /* ORANGE SECTION BUTTON */
+  .orange a {
+    width: 80%; /* was 15% (too small on mobile) */
+  }
+
+  /* STACK LARGE TEXT */
+  .white-2 {
+    font-size: 36px; /* was 70px (too big) */
+  }
+
+  /* NUMBERS SECTION */
+  .numbers {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .number-item.pair {
+    flex-direction: column;
+  }
+
+  .px {
+    font-size: 40px;
+  }
+
+  /* SECTIONS PADDING FIX */
+  .orange,
+  .orange-2,
+  .light-red-background,
+  .get-involved {
+    padding: 30px 15px;
+  }
+
+  /* FIX FORM GRID */
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  form textarea,
+  form button {
+    grid-column: span 1;
+  }
+
+  /* GENERAL CONTAINERS */
+  .container,
+  .contact-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  /* FOUNDER SECTION STACK */
+  .founder-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founder-image {
+    max-width: 100%;
+  }
+}
 </style>
 </head>
 
