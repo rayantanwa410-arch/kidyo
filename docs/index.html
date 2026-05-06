@@ -2737,6 +2737,17 @@ window.addEventListener("scroll", () => {
 
   lastScroll = currentScroll;
 });
+    <script>
+const slider = document.getElementById("navSlider");
+const nav = document.querySelector("nav");
+
+slider.addEventListener("input", () => {
+  const value = slider.value;
+
+  // Move nav up/down
+  nav.style.transform = `translateY(${value}px)`;
+});
+</script>
   </script>
 </body>
     </html>
