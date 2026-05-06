@@ -49,9 +49,18 @@ body {
 /* Navigation styles */
 nav {
   background-color: #87cefa;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-  position: sticky;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+  position: fixed;   /* change from sticky → fixed */
   top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+/* Hidden state */
+nav.hide {
+  transform: translateY(-100%);
 }
 
 nav ul {
@@ -1415,6 +1424,22 @@ document.addEventListener('DOMContentLoaded', function () {
   }, options);
 
   counters.forEach((c) => observer.observe(c));
+});
+    let lastScroll = 0;
+const nav = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll && currentScroll > 50) {
+    // Scrolling DOWN → hide nav
+    nav.classList.add("hide");
+  } else {
+    // Scrolling UP → show nav
+    nav.classList.remove("hide");
+  }
+
+  lastScroll = currentScroll;
 });
   </script>
 </body>
