@@ -3768,5 +3768,23 @@ Every child has a light inside them.
         </div>
     </div>
 </section>
+    <script>
+let lastScroll = 0;
+const nav = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll && currentScroll > 50) {
+    // Scrolling DOWN → hide nav
+    nav.classList.add("hide");
+  } else {
+    // Scrolling UP → show nav
+    nav.classList.remove("hide");
+  }
+
+  lastScroll = currentScroll;
+});
+</script>
            </body>
 </html>
