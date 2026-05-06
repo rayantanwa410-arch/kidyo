@@ -2618,6 +2618,40 @@ body.shifted p {
   transform: translateY(-80px);
   transition: transform 0.3s ease;
 }
+ 
+/* Hidden state: slides the navbar up out of view */
+.nav.hidden {
+  transform: translateY(-100%);
+}
+
+/* The toggle button styling */
+.toggle-btn {
+  position: absolute;
+  bottom: -30px; /* Positions it just below the navbar */
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  background: #333;
+  padding: 5px 15px;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Creating the "V" shape with two spans */
+.v-line {
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+.v-line:first-child { transform: rotate(45deg) translateX(2px); }
+.v-line:last-child { transform: rotate(-45deg) translateX(-2px); }
+
+/* Flip the "V" when the navbar is hidden */
+.nav.hidden .v-line:first-child { transform: rotate(-45deg) translateX(2px); }
+.nav.hidden .v-line:last-child { transform: rotate(45deg) translateX(-2px); }
+
 </style>
 </head>
 
@@ -2803,6 +2837,13 @@ toggle.addEventListener("click", () => {
     toggle.classList.remove("active");
   }
 });
+    const navbar = document.getElementById('navbar');
+const toggleBtn = document.getElementById('nav-toggle');
+
+toggleBtn.addEventListener('click', () => {
+  navbar.classList.toggle('hidden');
+});
+
 </script>
 </script>
   </script>
