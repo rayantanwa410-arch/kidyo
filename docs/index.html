@@ -2651,7 +2651,21 @@ body.shifted p {
 /* Flip the "V" when the navbar is hidden */
 .nav.hidden .v-line:first-child { transform: rotate(-45deg) translateX(2px); }
 .nav.hidden .v-line:last-child { transform: rotate(45deg) translateX(-2px); }
+.donate-section {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
 
+.donate-section iframe {
+  width: 100%;
+  border-radius: 12px;
+}
+  .donate-section {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
 </style>
 </head>
 
@@ -2733,12 +2747,24 @@ body.shifted p {
     </div>
     <!-- The two extra closing divs at the end of the original snippet were removed -->
   </section>
-<div id="uiToggle">⌄</div>
+  <section class="donate-section">
+  <h1>Support Kid Your Confidence</h1>
+  <p>Your donation helps kids build confidence and creativity.</p>
+
+  <iframe
+    src="givebutter.com/kidyourconfidence"
+    width="100%"
+    height="800"
+    frameborder="0"
+    scrolling="no">
+  </iframe>
+</section>
   <footer class="footer">
     <p>© 2026 Kid Your Confidence. All rights reserved.</p>
   </footer>
   <script>
-    console.log('app.js loaded');
+   
+console.log('app.js loaded');
 // Count-up animation for the impact numbers
 document.addEventListener('DOMContentLoaded', function () {
   const counters = document.querySelectorAll('.px[data-target]');
@@ -2794,56 +2820,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   counters.forEach((c) => observer.observe(c));
 });
-    let lastScroll = 0;
-const nav = document.querySelector("nav");
-
-window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
-
-  if (currentScroll > lastScroll && currentScroll > 50) {
-    // Scrolling DOWN → hide nav
-    nav.classList.add("hide");
-  } else {
-    // Scrolling UP → show nav
-    nav.classList.remove("hide");
-  }
-
-  lastScroll = currentScroll;
-});
-    <script>
-const slider = document.getElementById("navSlider");
-const nav = document.querySelector("nav");
-
-slider.addEventListener("input", () => {
-  const value = slider.value;
-
-  // Move nav up/down
-  nav.style.transform = `translateY(${value}px)`;
-});
-    <script>
-const toggle = document.getElementById("uiToggle");
-const body = document.body;
-
-let shifted = false;
-
-toggle.addEventListener("click", () => {
-  shifted = !shifted;
-
-  if (shifted) {
-    body.classList.add("shifted");
-    toggle.classList.add("active");
-  } else {
-    body.classList.remove("shifted");
-    toggle.classList.remove("active");
-  }
-});
-    const navbar = document.getElementById('navbar');
-const toggleBtn = document.getElementById('nav-toggle');
-
-toggleBtn.addEventListener('click', () => {
-  navbar.classList.toggle('hidden');
-});
-
 </script>
 </script>
   </script>
