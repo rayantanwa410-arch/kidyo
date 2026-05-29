@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,204 +6,2822 @@
   <meta charset="UTF-8" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home | Kid Your Confidence</title>
-  <link rel="icon" type="image/png" href="https://uploads.onecompiler.io/444rnfvys/444uvsynq/cropped-Kid-Your-Confidence-32x32.jpg" sizes="32x32">
-  <style>
-    /* ==========================================================================
-       1. UNIVERSAL RESET & BODY STYLES
-       ========================================================================== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png"
+    href="https://uploads.onecompiler.io/444rnfvys/444uvsynq/cropped-Kid-Your-Confidence-32x32.jpg" sizes="32x32">
+<style>
+    /* Fixed and streamlined code */
+
+/* Universal Reset: Common and valid reset for consistent styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Consolidated Body styles: Combined into a single declaration for clarity */
+body {
+  min-height: 100vh;
+  color: black;
+  /* Ensure a common font stack is used if "aboreto" isn't linked from web source */
+  font-family: "aboreto", "Segoe UI", "sans-serif";
+  animation: fadeIn 3s ease-in-out, slideIn 3s ease-in-out;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+/* Navigation styles */
+nav {
+  background-color: #87cefa;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+  position: fixed;   /* change from sticky → fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+/* Hidden state */
+nav.hide {
+  transform: translateY(-100%);
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 50px;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #00bfff;
+  transition: 0.1s;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+/* Specific Element Styles */
+/* Corrected animation property: added the missing animation name "fadeIn" */
+#Sans-Serif {
+  font-family: "sans-serif", Arial, sans-serif;
+  font-size: 59px;
+  text-align: left;
+  margin: 90px;
+  animation: slideIn 3s ease-in-out, fadeIn 2s ease-in;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Keyframes definitions */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.center {
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #222;
+}
+
+h1 {
+  /* Ensure a common font stack is used if "poppins" isn't linked from web source */
+  font-family: poppins, "sans-serif", Arial, sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+.pretty {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "sans-serif", Arial, sans-serif;
+  /* Added quotes for consistency */
+  font-size: 70px;
+  color: white;
+}
+
+/* Using a consistent class approach */
+#purple-section {
+  background-color: rgb(255, 190, 68);
+  /* This was a class in the original */
+  padding: 40px 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* center content vertically in the light-blue area */
+  justify-content: center;
+  gap: 20px;
+  animation: slideIn 3s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.purple-section {
+  background-color: lightblue;
+  padding: 40px 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* center content vertically in the purple area */
+  justify-content: center;
+  gap: 20px;
+}
+
+/* If the user intended for an ID to be styled differently, here is the ID selector for reference */
+/* #light-blue-section {
+  background-color: #87cefa;
+  padding: 20px;
+  margin-top: 20px;
+} */
+
+
+.numbers {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.impact-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  /* vertically center columns */
+  width: 100%;
+  max-width: 1100px;
+  /* keep content centered in page */
+  margin: 0 auto;
+  /* center container horizontally */
+  justify-content: center;
+  /* center the two columns as a group */
+  text-align: center;
+  /* ensure inline text centers */
+}
+
+.impact-text {
+  flex: 0 0 420px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 520px;
+  display: flex;
+  align-items: center;
+  /* center paragraph vertically */
+  justify-content: center;
+  /* center paragraph horizontally within its column */
+  text-align: center;
+}
+
+.numbers {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  /* center items so they sit next to each other */
+  gap: 36px;
+  margin-right: 8px;
+}
+
+
+.px {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+  font-size: 70px;
+  font-weight: 700;
+  color: white;
+}
+
+.number-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* stack label under number */
+  align-items: center;
+  gap: 6px;
+}
+
+/* When a pair of numbers should appear side-by-side */
+.number-item.pair {
+  flex-direction: row;
+  gap: 24px;
+}
+
+.small-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.label {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "sans-serif", Arial, sans-serif;
+}
+
+/* Redundant IDs removed as they are covered by the universal reset */
+/* #pppxxx, #ppxx, #px were removed */
+
+#impact {
+  text-align: center;
+  margin: 0;
+  font-size: 70px;
+  font-weight: 700;
+  color: white;
+  animation: color-Change 3s ease-in-out;
+  display: inline-block;
+  transform-origin: bottom center;
+}
+
+@keyframes color-Change 0% {
+  color: #ffcc00;
+}
+
+50% {
+  color: #87cefa;
+}
+
+10 0% {
+  color: #ffcc00;
+  color: #87cefa;
+  color: #f36262;
+}
+
+.center {
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #222;
+  animation: slideIn 3s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.light-blue-background {
+  background-color: #87cefa;
+  padding: 40px 20px;
+  margin-top: 20px;
+}
+
+.footer {
+  background-color: #87cefa;
+  padding: 20px 50px;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "sans-serif", Arial, sans-serif;
+  color: white;
+}
+
+.light-red-background {
+  background-color: #ff7f7f;
+  padding: 70px 20px;
+  margin-top: 20px;
+}
+
+#light-blue-section {
+  background-color: #87cefa;
+  animation: slideIn 3s ease-in-out;
+  animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#pink {
+  color: orange;
+  margin-top: 40px;
+}
+
+.about-section {
+  background-color: #87cefa;
+  padding: 40px 20px 70px 10px;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  /* Adjust this percentage to your preference */
+  /* Optional: Add some padding for better aesthetics */
+  padding: 20px;
+  /* Optional: Limit max width on very large screens */
+  max-width: 1200px;
+  align-items: center;
+  animation: slideIn 3s ease-in-out, fadeIn 2s ease-in;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.right {
+  text-align: left;
+}
+
+.founder-image {
+  float: right;
+  margin-left: 40px;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.get-involved {
+
+  background-color: lightcoral;
+  padding: 40px 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* center content vertically in the yellow area */
+  justify-content: center;
+  gap: 20px;
+  animation: slideIn 3s ease-in-out;
+}
+
+.button {
+  background-color: #ffffff;
+  color: #ff7f7f;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+  border: 2px solid #ff7f7f;
+}
+
+.button:hover {
+  background-color: #ff7f7f;
+  color: #ffffff;
+}
+
+.bottom {
+  margin-top: 10em;
+  text-align: center;
+}
+
+.impact-letter {
+  color: rgba(255, 255, 255, 0.95);
+  animation: slideIn 3s ease-in-out, slideOut 7s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.purple-section {
+  background-color: #87cefa;
+  margin-bottom: 20px;
+  animation: fadeIn 3s ease-in-out, slideIn 3s ease-in-out, flash 5s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.orange {
+  background-color: orange;
+  padding: 20px 20px 90px 90px;
+}
+
+#under {
+  transform: translateY(-50px);
+  text-align: center;
+}
+
+/* Add this to your styles.css file */
+
+/* Ensures the paragraph takes up its own line */
+/* Container to help demonstrate the effect, ensuring elements have space to center within */
+.orange {
+  /* added for context: provides a colored background for visibility and centers content block */
+  background-color: #fffaf0;
+  /* Light orange color */
+  border: 1px solid #ff8c00;
+  padding: 20px;
+  width: 80%;
+  margin: 20px auto;
+  /* Centers the container itself on the page */
+  text-align: center;
+  /* Ensures text inside is centered */
+}
+
+/* Original CSS provided in your prompt */
+.orange p {
+  display: block;
+  margin-bottom: 20px;
+  /* Since the parent has text-align: center;, this P tag's content is centered */
+}
+
+.orange a {
+  display: block;
+  /* Makes the anchor tag behave like a div/block */
+  text-align: center;
+  /* Centers the text inside the block */
+  margin: 0 auto 10px;
+  /* Centers the block itself horizontally within its parent */
+  width: 15%;
+  /* Optional, makes the block narrower */
+  background-color: #ff8c00;
+  /* Example style for visibility */
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.big {
+  margin-top: 40px;
+}
+
+.blue {
+  color: blue;
+}
+
+.blu {
+  color: lightcoral;
+}
+
+.text-box {
+  display: inline-block;
+}
+
+.yellow {
+  color: orange;
+}
+
+.red {
+  color: red;
+}
+.red-2 {
+    background-color: lightcoral;
+    padding: 60px 20px; /* Simplified padding for better centering */
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Animation shorthand: name | duration | timing-function */
+    animation: slideIn 1.2s ease-out, fadeIn 2s ease-in;
+  }
+
+  .white {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 2.5rem; /* Makes the heading pop */
+  }
+
+  /* Keyframes for the slide-up effect */
+  @keyframes slideIn {
+    0% { transform: translateY(30px); }
+    100% { transform: translateY(0); }
+  }
+
+  /* Keyframes for the fade-in effect */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+/* file: styles.css */
+.form-container {
+  background-color: #f9f9f9;
+  /* Light gray background color for the form container */
+  border-radius: 10px;
+  /* Rounded corners for the form container */
+  padding: 20px;
+  /* Space inside the container */
+  width: 80%;
+  /* Width of the form container */
+  margin: 10 auto;
+  /* Centering the form container horizontally */
+}
+
+/* Styles for the labels */
+label {
+  margin-bottom: 10px;
+  /* Space below each label */
+  color: #fff;
+  /* Dark gray font color for labels */
+  display: block;
+  /* Ensures each label appears on a new line */
+}
+
+.form-container {
+  background-color: #f9f9f9;
+  /* Light gray background color for the form container */
+  border-radius: 10px;
+  /* Rounded corners for the form container */
+  padding: 20px;
+  /* Space inside the container */
+  width: 80%;
+  /* Width of the form container */
+  margin: 10 auto;
+  /* Centering the form container horizontally */
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  /* Optimal width for readability */
+  margin: 20px;
+}
+
+h2 {
+  color: orange;
+  margin-bottom: 10px;
+}
+
+p {
+  color: black;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #444;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  /* Ensures full width */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* Ensures padding doesn't affect width */
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+  /* Highlight on focus */
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  /* Professional blue CTA */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  /* Darker blue on hover */
+}
+
+/* Basic mobile responsiveness */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 20px;
+  }
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #007bff;
+  /* A professional blue underline */
+  padding-bottom: 10px;
+}
+
+p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #444;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* Important for consistent sizing */
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Ensure responsiveness on small screens */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 20px;
+    margin: 10px;
+  }
+}
+
+header {
+  background-color: orange;
+  padding: 25px;
+  text-align: center;
+  color: white;
+  border-radius: 12px 12px 12px 12px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+  margin-top: auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+main {
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: white;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.intro p {
+  color: #555;
+  font-size: 17px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+form input,
+form textarea {
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+form textarea {
+  grid-column: span 2;
+  resize: vertical;
+  min-height: 140px;
+}
+
+form button {
+  grid-column: span 2;
+  padding: 14px;
+  background-color: lightcoral;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: red;
+}
+
+.contact-details {
+  margin-top: 40px;
+  text-align: center;
+  color: #555;
+}
+
+.contact-details p {
+  margin: 6px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  form textarea,
+  form button {
+    grid-column: span 1;
+  }
+}
+
+.white {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+#bold {
+  font-weight: bold;
+  align-items: right;
+}
+
+.curved {
+  border-radius: 15px;
+  align-items: right;
+}
+
+.orange-2 {
+  background-color: orange;
+  padding: 50 55 60 65;
+}
+
+.white-2 {
+  color: white;
+  font-size: 70px;
+}
+
+.red-2 {
+    background-color: lightcoral;
+    padding: 50px 55px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    /* Linking the animations defined below */
+    animation: slideIn 1.5s ease-out, fadeIn 2s ease-in;
+  }
+
+  .white {
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  /* Defining the animation movements */
+  @keyframes slideIn {
+    from { transform: translateY(20px); }
+    to { transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+    @keyframes slideIn {
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .foote h1 {
+      margin-bottom: 15px;
     }
 
-    :root {
-      --primary-color: #2563eb; 
-      --text-dark: #1e293b;    
-      --text-light: #64748b;   
-      --bg-light: #f8fafc;     
-    }
-
-    body {
-      min-height: 100vh;
-      color: black;
-      font-family: "aboreto", "Segoe UI", "sans-serif";
-      animation: fadeIn 3s ease-in-out, slideIn 1.2s ease-in-out;
-    }
-
-    /* ==========================================================================
-       2. NAVIGATION STYLES
-       ========================================================================== */
-    nav {
-      background-color: #87cefa;
-      box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
-      position: fixed;   
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      transition: transform 0.3s ease;
-    }
-
-    nav.hide {
-      transform: translateY(-100%);
-    }
-
-    nav ul {
-      width: 100%;
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    nav li {
-      height: 50px;
-    }
-
-    nav li:first-child {
-      margin-right: auto;
-    }
-
-    nav a {
-      height: 50px;
-      padding: 0 30px;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      color: white;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      background-color: #00bfff;
-      transition: 0.1s;
-    }
-
-    /* ==========================================================================
-       3. TYPOGRAPHY & GENERAL ELEMENTS
-       ========================================================================== */
-    h1 {
-      font-family: poppins, "sans-serif", Arial, sans-serif;
-      font-size: 50px;
-      text-align: center;
-    }
-
-    h2 {
-      color: orange;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: black;
-    }
-
-    .center {
-      max-width: 900px;
-      margin: 20px auto;
-      text-align: center;
-      font-size: 18px;
+    .foote p {
+      max-width: 600px;
       line-height: 1.6;
-      color: #222;
-      animation: slideIn 1.2s ease-in-out;
+    }
+    /* Color Variables for easy editing */
+:root {
+    --primary-color: #2563eb; /* Modern Royal Blue */
+    --text-dark: #1e293b;    /* Deep Charcoal */
+    --text-light: #64748b;   /* Soft Gray */
+    --bg-light: #f8fafc;     /* Clean Off-white */
+}
+
+.founder-section {
+    padding: 80px 20px;
+    background-color: var(--bg-light);
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.founder-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* IMAGE WITH HOVER ANIMATION */
+.founder-image-column {
+    flex: 1;
+    min-width: 300px;
+    perspective: 1000px; /* Adds depth for the animation */
+}
+
+.founder-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth "pop" effect */
+    display: block;
+}
+
+.founder-image:hover {
+    transform: translateY(-10px) scale(1.02); /* Lifts up and grows slightly */
+    box-shadow: 0 30px 40px -10px rgba(0, 0, 0, 0.2);
+}
+
+/* TEXT STYLING */
+.founder-text-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.subtitle {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.founder-text-column h2 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.founder-text-column p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+/* BUTTON ANIMATION */
+.btn-primary {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: var(--text-dark);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    transform: translateX(5px); /* Moves slightly right on hover */
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .founder-text-column h2 { font-size: 2rem; }
+    .founder-container { gap: 30px; }
+}
+/* Contact Page Specific Styles */
+.contact-page {
+    padding: 60px 20px;
+    background-color: #f8fafc;
+    min-height: 80vh;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-grid {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Form Styling */
+.contact-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #6a11cb; /* Matches your purple theme */
+}
+
+.submit-btn {
+    background: #6a11cb;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #2575fc;
+}
+
+/* Info Styling */
+.contact-details {
+    flex: 1;
+    min-width: 250px;
+    background: #f1f5f9;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.detail-item {
+    margin-bottom: 20px;
+}
+
+.detail-item strong {
+    display: block;
+    color: #87cefa;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.detail-item p {
+    margin: 5px 0 0;
+    font-weight: 500;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .form-group {
+        flex-direction: column;
+    }
+    .contact-grid {
+        flex-direction: column;
+    }
+}
+  /* ===== MOBILE FIXES ===== */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    padding: 12px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* MAIN HEADLINE */
+  .big {
+    font-size: 32px;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  /* PARAGRAPHS */
+  .center {
+    padding: 0 15px;
+    font-size: 16px;
+  }
+
+  /* ORANGE SECTION BUTTON */
+  .orange a {
+    width: 80%; /* was 15% (too small on mobile) */
+  }
+
+  /* STACK LARGE TEXT */
+  .white-2 {
+    font-size: 36px; /* was 70px (too big) */
+  }
+
+  /* NUMBERS SECTION */
+  .numbers {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .number-item.pair {
+    flex-direction: column;
+  }
+
+  .px {
+    font-size: 40px;
+  }
+
+  /* SECTIONS PADDING FIX */
+  .orange,
+  .orange-2,
+  .light-red-background,
+  .get-involved {
+    padding: 30px 15px;
+  }
+
+  /* FIX FORM GRID */
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  form textarea,
+  form button {
+    grid-column: span 1;
+  }
+
+  /* GENERAL CONTAINERS */
+  .container,
+  .contact-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  /* FOUNDER SECTION STACK */
+  .founder-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founder-image {
+    max-width: 100%;
+  }
+}
+    /* Fixed and streamlined code */
+
+/* Universal Reset: Common and valid reset for consistent styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Consolidated Body styles: Combined into a single declaration for clarity */
+body {
+  min-height: 100vh;
+  color: black;
+  /* Ensure a common font stack is used if "aboreto" isn't linked from web source */
+  font-family: "aboreto", "Segoe UI", "sans-serif";
+  animation: fadeIn 3s ease-in-out, slideIn 3s ease-in-out;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+/* Navigation styles */
+nav {
+  background-color: #87cefa;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+  position: fixed;   /* change from sticky → fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+/* Hidden state */
+nav.hide {
+  transform: translateY(-100%);
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 50px;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #00bfff;
+  transition: 0.1s;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+/* Specific Element Styles */
+/* Corrected animation property: added the missing animation name "fadeIn" */
+#Sans-Serif {
+  font-family: "sans-serif", Arial, sans-serif;
+  font-size: 59px;
+  text-align: left;
+  margin: 90px;
+  animation: slideIn 3s ease-in-out, fadeIn 2s ease-in;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Keyframes definitions */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.center {
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #222;
+}
+
+h1 {
+  /* Ensure a common font stack is used if "poppins" isn't linked from web source */
+  font-family: poppins, "sans-serif", Arial, sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+.pretty {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "sans-serif", Arial, sans-serif;
+  /* Added quotes for consistency */
+  font-size: 70px;
+  color: white;
+}
+
+/* Using a consistent class approach */
+#purple-section {
+  background-color: rgb(255, 190, 68);
+  /* This was a class in the original */
+  padding: 40px 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* center content vertically in the light-blue area */
+  justify-content: center;
+  gap: 20px;
+  animation: slideIn 3s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.purple-section {
+  background-color: lightblue;
+  padding: 40px 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* center content vertically in the purple area */
+  justify-content: center;
+  gap: 20px;
+}
+
+/* If the user intended for an ID to be styled differently, here is the ID selector for reference */
+/* #light-blue-section {
+  background-color: #87cefa;
+  padding: 20px;
+  margin-top: 20px;
+} */
+
+
+.numbers {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.impact-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  /* vertically center columns */
+  width: 100%;
+  max-width: 1100px;
+  /* keep content centered in page */
+  margin: 0 auto;
+  /* center container horizontally */
+  justify-content: center;
+  /* center the two columns as a group */
+  text-align: center;
+  /* ensure inline text centers */
+}
+
+.impact-text {
+  flex: 0 0 420px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 520px;
+  display: flex;
+  align-items: center;
+  /* center paragraph vertically */
+  justify-content: center;
+  /* center paragraph horizontally within its column */
+  text-align: center;
+}
+
+.numbers {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  /* center items so they sit next to each other */
+  gap: 36px;
+  margin-right: 8px;
+}
+
+
+.px {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+  font-size: 70px;
+  font-weight: 700;
+  color: white;
+}
+
+.number-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* stack label under number */
+  align-items: center;
+  gap: 6px;
+}
+
+/* When a pair of numbers should appear side-by-side */
+.number-item.pair {
+  flex-direction: row;
+  gap: 24px;
+}
+
+.small-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.label {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "sans-serif", Arial, sans-serif;
+}
+
+/* Redundant IDs removed as they are covered by the universal reset */
+/* #pppxxx, #ppxx, #px were removed */
+
+#impact {
+  text-align: center;
+  margin: 0;
+  font-size: 70px;
+  font-weight: 700;
+  color: white;
+  animation: color-Change 3s ease-in-out;
+  display: inline-block;
+  transform-origin: bottom center;
+}
+
+@keyframes color-Change 0% {
+  color: #ffcc00;
+}
+
+50% {
+  color: #87cefa;
+}
+
+10 0% {
+  color: #ffcc00;
+  color: #87cefa;
+  color: #f36262;
+}
+
+.center {
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #222;
+  animation: slideIn 3s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.light-blue-background {
+  background-color: #87cefa;
+  padding: 40px 20px;
+  margin-top: 20px;
+}
+
+.footer {
+  background-color: #87cefa;
+  padding: 20px 50px;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "sans-serif", Arial, sans-serif;
+  color: white;
+}
+
+.light-red-background {
+  background-color: #ff7f7f;
+  padding: 70px 20px;
+  margin-top: 20px;
+}
+
+#light-blue-section {
+  background-color: #87cefa;
+  animation: slideIn 3s ease-in-out;
+  animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#pink {
+  color: orange;
+  margin-top: 40px;
+}
+
+.about-section {
+  background-color: #87cefa;
+  padding: 40px 20px 70px 10px;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  /* Adjust this percentage to your preference */
+  /* Optional: Add some padding for better aesthetics */
+  padding: 20px;
+  /* Optional: Limit max width on very large screens */
+  max-width: 1200px;
+  align-items: center;
+  animation: slideIn 3s ease-in-out, fadeIn 2s ease-in;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.right {
+  text-align: left;
+}
+
+.founder-image {
+  float: right;
+  margin-left: 40px;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.get-involved {
+
+  background-color: lightcoral;
+  padding: 40px 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* center content vertically in the yellow area */
+  justify-content: center;
+  gap: 20px;
+  animation: slideIn 3s ease-in-out;
+}
+
+.button {
+  background-color: #ffffff;
+  color: #ff7f7f;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+  border: 2px solid #ff7f7f;
+}
+
+.button:hover {
+  background-color: #ff7f7f;
+  color: #ffffff;
+}
+
+.bottom {
+  margin-top: 10em;
+  text-align: center;
+}
+
+.impact-letter {
+  color: rgba(255, 255, 255, 0.95);
+  animation: slideIn 3s ease-in-out, slideOut 7s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.purple-section {
+  background-color: #87cefa;
+  margin-bottom: 20px;
+  animation: fadeIn 3s ease-in-out, slideIn 3s ease-in-out, flash 5s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.orange {
+  background-color: orange;
+  padding: 20px 20px 90px 90px;
+}
+
+#under {
+  transform: translateY(-50px);
+  text-align: center;
+}
+
+/* Add this to your styles.css file */
+
+/* Ensures the paragraph takes up its own line */
+/* Container to help demonstrate the effect, ensuring elements have space to center within */
+.orange {
+  /* added for context: provides a colored background for visibility and centers content block */
+  background-color: #fffaf0;
+  /* Light orange color */
+  border: 1px solid #ff8c00;
+  padding: 20px;
+  width: 80%;
+  margin: 20px auto;
+  /* Centers the container itself on the page */
+  text-align: center;
+  /* Ensures text inside is centered */
+}
+
+/* Original CSS provided in your prompt */
+.orange p {
+  display: block;
+  margin-bottom: 20px;
+  /* Since the parent has text-align: center;, this P tag's content is centered */
+}
+
+.orange a {
+  display: block;
+  /* Makes the anchor tag behave like a div/block */
+  text-align: center;
+  /* Centers the text inside the block */
+  margin: 0 auto 10px;
+  /* Centers the block itself horizontally within its parent */
+  width: 15%;
+  /* Optional, makes the block narrower */
+  background-color: #ff8c00;
+  /* Example style for visibility */
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.big {
+  margin-top: 40px;
+}
+
+.blue {
+  color: blue;
+}
+
+.blu {
+  color: lightcoral;
+}
+
+.text-box {
+  display: inline-block;
+}
+
+.yellow {
+  color: orange;
+}
+
+.red {
+  color: red;
+}
+.red-2 {
+    background-color: lightcoral;
+    padding: 60px 20px; /* Simplified padding for better centering */
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Animation shorthand: name | duration | timing-function */
+    animation: slideIn 1.2s ease-out, fadeIn 2s ease-in;
+  }
+
+  .white {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 2.5rem; /* Makes the heading pop */
+  }
+
+  /* Keyframes for the slide-up effect */
+  @keyframes slideIn {
+    0% { transform: translateY(30px); }
+    100% { transform: translateY(0); }
+  }
+
+  /* Keyframes for the fade-in effect */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+/* file: styles.css */
+.form-container {
+  background-color: #f9f9f9;
+  /* Light gray background color for the form container */
+  border-radius: 10px;
+  /* Rounded corners for the form container */
+  padding: 20px;
+  /* Space inside the container */
+  width: 80%;
+  /* Width of the form container */
+  margin: 10 auto;
+  /* Centering the form container horizontally */
+}
+
+/* Styles for the labels */
+label {
+  margin-bottom: 10px;
+  /* Space below each label */
+  color: #fff;
+  /* Dark gray font color for labels */
+  display: block;
+  /* Ensures each label appears on a new line */
+}
+
+.form-container {
+  background-color: #f9f9f9;
+  /* Light gray background color for the form container */
+  border-radius: 10px;
+  /* Rounded corners for the form container */
+  padding: 20px;
+  /* Space inside the container */
+  width: 80%;
+  /* Width of the form container */
+  margin: 10 auto;
+  /* Centering the form container horizontally */
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  /* Optimal width for readability */
+  margin: 20px;
+}
+
+h2 {
+  color: orange;
+  margin-bottom: 10px;
+}
+
+p {
+  color: black;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #444;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  /* Ensures full width */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* Ensures padding doesn't affect width */
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+  /* Highlight on focus */
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  /* Professional blue CTA */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  /* Darker blue on hover */
+}
+
+/* Basic mobile responsiveness */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 20px;
+  }
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #007bff;
+  /* A professional blue underline */
+  padding-bottom: 10px;
+}
+
+p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #444;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* Important for consistent sizing */
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Ensure responsiveness on small screens */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 20px;
+    margin: 10px;
+  }
+}
+
+header {
+  background-color: orange;
+  padding: 25px;
+  text-align: center;
+  color: white;
+  border-radius: 12px 12px 12px 12px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+  margin-top: auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+main {
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: white;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.intro p {
+  color: #555;
+  font-size: 17px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+form input,
+form textarea {
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+form textarea {
+  grid-column: span 2;
+  resize: vertical;
+  min-height: 140px;
+}
+
+form button {
+  grid-column: span 2;
+  padding: 14px;
+  background-color: lightcoral;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: red;
+}
+
+.contact-details {
+  margin-top: 40px;
+  text-align: center;
+  color: #555;
+}
+
+.contact-details p {
+  margin: 6px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  form textarea,
+  form button {
+    grid-column: span 1;
+  }
+}
+
+.white {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+#bold {
+  font-weight: bold;
+  align-items: right;
+}
+
+.curved {
+  border-radius: 15px;
+  align-items: right;
+}
+
+.orange-2 {
+  background-color: orange;
+  padding: 50 55 60 65;
+}
+
+.white-2 {
+  color: white;
+  font-size: 70px;
+}
+
+.red-2 {
+    background-color: lightcoral;
+    padding: 50px 55px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    /* Linking the animations defined below */
+    animation: slideIn 1.5s ease-out, fadeIn 2s ease-in;
+  }
+
+  .white {
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  /* Defining the animation movements */
+  @keyframes slideIn {
+    from { transform: translateY(20px); }
+    to { transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+    @keyframes slideIn {
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .foote h1 {
+      margin-bottom: 15px;
     }
 
-    .pretty {
-      text-align: center;
-      margin-top: 20px;
-      font-family: "sans-serif", Arial, sans-serif;
-      font-size: 70px;
-      color: white;
+    .foote p {
+      max-width: 600px;
+      line-height: 1.6;
+    }
+    /* Color Variables for easy editing */
+:root {
+    --primary-color: #2563eb; /* Modern Royal Blue */
+    --text-dark: #1e293b;    /* Deep Charcoal */
+    --text-light: #64748b;   /* Soft Gray */
+    --bg-light: #f8fafc;     /* Clean Off-white */
+}
+
+.founder-section {
+    padding: 80px 20px;
+    background-color: var(--bg-light);
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.founder-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* IMAGE WITH HOVER ANIMATION */
+.founder-image-column {
+    flex: 1;
+    min-width: 300px;
+    perspective: 1000px; /* Adds depth for the animation */
+}
+
+.founder-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth "pop" effect */
+    display: block;
+}
+
+.founder-image:hover {
+    transform: translateY(-10px) scale(1.02); /* Lifts up and grows slightly */
+    box-shadow: 0 30px 40px -10px rgba(0, 0, 0, 0.2);
+}
+
+/* TEXT STYLING */
+.founder-text-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.subtitle {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.founder-text-column h2 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.founder-text-column p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+/* BUTTON ANIMATION */
+.btn-primary {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: var(--text-dark);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    transform: translateX(5px); /* Moves slightly right on hover */
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .founder-text-column h2 { font-size: 2rem; }
+    .founder-container { gap: 30px; }
+}
+/* Contact Page Specific Styles */
+.contact-page {
+    padding: 60px 20px;
+    background-color: #f8fafc;
+    min-height: 80vh;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-grid {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Form Styling */
+.contact-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #6a11cb; /* Matches your purple theme */
+}
+
+.submit-btn {
+    background: #6a11cb;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #2575fc;
+}
+
+/* Info Styling */
+.contact-details {
+    flex: 1;
+    min-width: 250px;
+    background: #f1f5f9;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.detail-item {
+    margin-bottom: 20px;
+}
+
+.detail-item strong {
+    display: block;
+    color: #87cefa;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.detail-item p {
+    margin: 5px 0 0;
+    font-weight: 500;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .form-group {
+        flex-direction: column;
+    }
+    .contact-grid {
+        flex-direction: column;
+    }
+}
+  /* ===== MOBILE FIXES ===== */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    padding: 12px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* MAIN HEADLINE */
+  .big {
+    font-size: 32px;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  /* PARAGRAPHS */
+  .center {
+    padding: 0 15px;
+    font-size: 16px;
+  }
+
+  /* ORANGE SECTION BUTTON */
+  .orange a {
+    width: 80%; /* was 15% (too small on mobile) */
+  }
+
+  /* STACK LARGE TEXT */
+  .white-2 {
+    font-size: 36px; /* was 70px (too big) */
+  }
+
+  /* NUMBERS SECTION */
+  .numbers {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .number-item.pair {
+    flex-direction: column;
+  }
+
+  .px {
+    font-size: 40px;
+  }
+
+  /* SECTIONS PADDING FIX */
+  .orange,
+  .orange-2,
+  .light-red-background,
+  .get-involved {
+    padding: 30px 15px;
+  }
+
+  /* FIX FORM GRID */
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  form textarea,
+  form button {
+    grid-column: span 1;
+  }
+
+  /* GENERAL CONTAINERS */
+  .container,
+  .contact-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  /* FOUNDER SECTION STACK */
+  .founder-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founder-image {
+    max-width: 100%;
+  }
+}
+  /* Slider container */
+.ui-slider {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 2000;
+}
+
+/* Make it look nicer */
+.ui-slider input {
+  width: 100%;
+}
+
+/* Ensure nav can move */
+nav {
+  transition: transform 0.2s ease;
+}
+  /* Floating arrow button */
+#uiToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #87cefa;
+  color: white;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, background 0.3s;
+}
+
+/* Hover effect */
+#uiToggle:hover {
+  background-color: #00bfff;
+}
+
+/* When active (UI moved up) */
+#uiToggle.active {
+  transform: rotate(180deg); /* flips arrow */
+}
+
+/* Make sure nav + UI can move */
+body.shifted nav {
+  transform: translateY(-80px);
+}
+
+body.shifted main,
+body.shifted section,
+body.shifted h1,
+body.shifted p {
+  transform: translateY(-80px);
+  transition: transform 0.3s ease;
+}
+ 
+/* Hidden state: slides the navbar up out of view */
+.nav.hidden {
+  transform: translateY(-100%);
+}
+
+/* The toggle button styling */
+.toggle-btn {
+  position: absolute;
+  bottom: -30px; /* Positions it just below the navbar */
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  background: #333;
+  padding: 5px 15px;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Creating the "V" shape with two spans */
+.v-line {
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+.v-line:first-child { transform: rotate(45deg) translateX(2px); }
+.v-line:last-child { transform: rotate(-45deg) translateX(-2px); }
+
+/* Flip the "V" when the navbar is hidden */
+.nav.hidden .v-line:first-child { transform: rotate(-45deg) translateX(2px); }
+.nav.hidden .v-line:last-child { transform: rotate(45deg) translateX(-2px); }
+.donate-section {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+  .donate-section {
+  background: lightcoral;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+  #donate:link {
+  text-decoration: none;
+    color: white;
+  }
+  #donate:visited {
+ color: lightblue;
+  }
+  #donate:hover {
+    color: purple;
+  }
+</style>
+</head>
+
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li><a href="index.html" id="logo"><img src="https://uploads.onecompiler.io/444rnfvys/444uvsynq/cropped-Kid-Your-Confidence-32x32.jpg" alt="">Kid Your Confidence</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <h1 class="big">
+    <span class="yellow">Confident</span> <span class="blue">Today</span>,
+    <span class="red">Leaders</span> <span class="yellow">Tomorrow</span>
+  </h1>
+  <p class="center">
+    “Kid Your Confidence” is a youth-led nonprofit organization dedicated to uplifting underprivileged children through
+    creative programs, hands-on empowerment, and educational support that inspire self-belief and personal growth.
+  </p>
+  <section class="orange">
+    <p>
+      At Kid Your Confidence, we're proud of the difference we're making
+      in the lives of children and families in our community. Our
+      innovative confidence-building kits and mentorship programs have
+      reached hundreds of young people, inspiring them to believe in
+      themselves and pursue their dreams.
+    </p>
+    <a href="services.html" class="button">Learn More</a>
+  </section>
+  <section class="orange-2">
+    <h1 class="white-2">
+      Empowering
+    </h1>
+    <h1 class="white-2">
+      Children
+    </h1>
+    <h1 class="white-2">
+      One
+    </h1>
+    <h1 class="white-2">
+      By
+    </h1>
+    <h1 class="white-2">
+      One</h1>
+      <div class="numbers">
+        <div class="number-item">
+          <div class="px" id="pppxxx" data-target="20" data-duration="2000" data-easing="easeOut Cubic">
+            0
+          </div>
+          <div class="label">Kits Distributed</div>
+        </div>
+        <div class="number-item">
+          <div class="px" id="ppxx" data-target="20" data-duration="2000" data-easing="easeOut Cubic">
+            0
+          </div>
+          <div class="label">Children Impacted</div>
+        </div>
+        <div class="number-item pair">
+          <div class="small-number">
+            <div class="px" id="ppxxx-three" data-target="800" data-plus="true" data-duration="2000"
+              data-easing="easeOutQuad">
+              0
+            </div>
+            <div class="label">Followers</div>
+          </div>
+          <div class="small-number">
+            <div class="px" id="ppxxx-four" data-target="10" data-plus="true" data-duration="2000" data-easing="linear">
+              0
+            </div>
+            <div class="label">Supporters</div>
+          </div>
+          <!-- Missing closing div tag for the 'pair' class was added here -->
+        </div>
+        <!-- This closing div corresponds to the 'numbers' div -->
+      </div>
+      <!-- This closing div corresponds to the 'impact-content' div -->
+    </div>
+    <!-- The two extra closing divs at the end of the original snippet were removed -->
+  </section>
+  <section class="donate-section">
+  <h1>Support Kid Your Confidence</h1>
+  <p>Your donation helps kids build confidence and creativity.</p>
+
+<a href="https://givebutter.com/kid-your-confidence" id-"donate">Donate to Kid Your Confidence!</a>
+</section>
+  <footer class="footer">
+    <p>© 2026 Kid Your Confidence. All rights reserved.</p>
+  </footer>
+  <script>
+   
+console.log('app.js loaded');
+// Count-up animation for the impact numbers
+document.addEventListener('DOMContentLoaded', function () {
+  const counters = document.querySelectorAll('.px[data-target]');
+  const options = { root: null, rootMargin: '0px', threshold: 0.3 };
+
+  function animateCount(el, target) {
+    const duration = parseInt(el.dataset.duration, 10) || 1500; // ms
+    const easingName = el.dataset.easing || 'linear';
+    const start = performance.now();
+
+    function getEasing(name) {
+      switch (name) {
+        case 'easeOutCubic':
+          return (t) => 1 - Math.pow(1 - t, 3);
+        case 'easeOutQuad':
+          return (t) => 1 - (1 - t) * (1 - t);
+        case 'linear':
+        default:
+          return (t) => t;
+      }
     }
 
-    .big {
-      margin-top: 40px;
+    const ease = getEasing(easingName);
+
+    function step(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = ease(progress);
+      const value = Math.floor(eased * target);
+      let text = value.toLocaleString();
+      if (el.dataset.plus === 'true') text += '+';
+      el.textContent = text;
+      if (progress < 1) requestAnimationFrame(step);
+      else {
+        let finalText = target.toLocaleString();
+        if (el.dataset.plus === 'true') finalText += '+';
+        el.textContent = finalText;
+      }
     }
 
-    #Sans-Serif {
-      font-family: "sans-serif", Arial, sans-serif;
-      font-size: 59px;
-      text-align: left;
-      margin: 90px;
-      animation: slideIn 1.2s ease-in-out, fadeIn 2s ease-in;
-    }
+    requestAnimationFrame(step);
+  }
 
-    /* ==========================================================================
-       4. LAYOUT SECTIONS & BACKGROUNDS
-       ========================================================================== */
-    .container {
-      width: 80%;
-      padding: 20px;
-      max-width: 1200px;
-      align-items: center;
-      animation: slideIn 1.2s ease-in-out, fadeIn 2s ease-in;
-    }
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.getAttribute('data-target'), 10) || 0;
+        animateCount(el, target);
+        obs.unobserve(el);
+      }
+    });
+  }, options);
 
-    #purple-section {
-      background-color: rgb(255, 190, 68);
-      padding: 40px 20px;
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      animation: slideIn 1.2s ease-in-out;
-    }
-
-    .purple-section {
-      background-color: #87cefa;
-      padding: 40px 20px;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      animation: fadeIn 3s ease-in-out, slideIn 1.2s ease-in-out;
-    }
-
-    .light-blue-background {
-      background-color: #87cefa;
-      padding: 40px 20px;
-      margin-top: 20px;
-    }
-
-    #light-blue-section {
-      background-color: #87cefa;
-      animation: slideIn 1.2s ease-in-out, fadeIn 3s ease-in-out;
-    }
-
-    .light-red-background {
-      background-color: #ff7f7f;
-      padding: 70px 20px;
-      margin-top: 20px;
-    }
-
-    .orange {
-      background-color: #fffaf0;
-      border: 1px solid #ff8c00;
-      padding: 20px;
-      width: 80%;
-      margin: 20px auto;
-      text-align: center;
-    }
-
-    .orange p {
-      display: block;
-      margin-bottom: 20px;
-    }
-
-    .orange a {
-      display: block;
-      text-align: center;
-      margin: 0 auto 10px;
-      width: 15%;
-      background-color: #ff8c00;
-      color: white;
-      padding: 5px;
-      text-decoration: none;
-    }
-
-    .orange-2 {
+  counters.forEach((c) => observer.observe(c));
+});
+</script>
+</script>
+  </script>
+</body>
+    </html>
