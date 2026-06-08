@@ -2682,11 +2682,24 @@ body.shifted p {
   #donate{
     text-align: center;
   }
+.doomscroll{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+  
+  /* Crucial: Smoothly transition the opacity over 0.2 seconds */
+  transition: opacity 0.2s ease-out; 
+}
 </style>
 </head>
 
 <body>
-  <nav>
+  <nav class="doomscroll">
     <ul class="sidebar">
       <li><a href="index.html" id="logo"><img src="https://uploads.onecompiler.io/444rnfvys/444uvsynq/cropped-Kid-Your-Confidence-32x32.jpg" alt="">Kid Your Confidence</a></li>
       <li><a href="index.html">Home</a></li>
@@ -2830,6 +2843,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
   counters.forEach((c) => observer.observe(c));
 });
+    window.addEventListener('scroll', function() {
+  const uiElement = document.getElementById('fade-ui');
+  const scrollPosition = window.scrollY; // How many pixels you scrolled down
+  
+  // Choose how many pixels of scrolling triggers a total fade-out
+  const fadePoint = 200; 
+
+  if (scrollPosition > fadePoint) {
+    uiElement.style.opacity = '0';
+    uiElement.style.pointerEvents = 'none'; // Prevents clicking the hidden UI
+  } else {
+    uiElement.style.opacity = '1';
+    uiElement.style.pointerEvents = 'auto';  // Enables clicking again
+  }
+});
+
 </script>
 </script>
   </script>
