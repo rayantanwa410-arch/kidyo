@@ -12,53 +12,12 @@
 <style>
     /* Fixed and streamlined code */
 
-/* Universal Reset: Common and valid reset for consistent styling */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Consolidated Body styles: Combined into a single declaration for clarity */
-body {
-  min-height: 100vh;
-  color: black;
-  /* Ensure a common font stack is used if "aboreto" isn't linked from web source */
-  font-family: "aboreto", "Segoe UI", "sans-serif";
-  animation: fadeIn 3s ease-in-out, slideIn 3s ease-in-out;
-}
-@keyframes slideIn {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
 /* Navigation styles */
 nav {
   background-color: #87cefa;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-}
-
-
-/* Hidden state */
-nav.hide {
-  transform: translateY(-100%);
 }
 
 nav ul {
@@ -90,41 +49,6 @@ nav a:hover {
 
 nav li:first-child {
   margin-right: auto;
-}
-
-/* Specific Element Styles */
-/* Corrected animation property: added the missing animation name "fadeIn" */
-#Sans-Serif {
-  font-family: "sans-serif", Arial, sans-serif;
-  font-size: 59px;
-  text-align: left;
-  margin: 90px;
-  animation: slideIn 3s ease-in-out, fadeIn 2s ease-in;
-}
-
-@keyframes grow {
-  0% {
-    transform: scale(0.5);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Keyframes definitions */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-h1 {
-  font-size: 50px;
 }
 
 .center {
