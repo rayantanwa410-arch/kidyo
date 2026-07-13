@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1001,164 +1000,31 @@ footer {
     color: white;
     text-decoration: none;
     border-radius: 8px;
-    font-weight: 600;
     transition: all 0.3s ease;
+    font-weight: 600;
 }
 
 .btn-primary:hover {
     background-color: var(--primary-color);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 20px rgba(37, 99, 235, 0.2);
 }
 
-.v-line {
-  width: 25px;
-  height: 2px;
-  background: white;
-  transition: 0.3s;
-}
-
-.v-line:first-child { transform: rotate(45deg) translateX(2px); }
-.v-line:last-child { transform: rotate(-45deg) translateX(-2px); }
-
-/* Flip the "V" when the navbar is hidden */
-.nav.hidden .v-line:first-child { transform: rotate(-45deg) translateX(2px); }
-.nav.hidden .v-line:last-child { transform: rotate(45deg) translateX(-2px); }
-.donate-section {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
-}
-  .donate-section {
-  background: lightcoral;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  text-align: center;
-}
-  #donate:link {
-  text-decoration: none;
-    color: white;
-    text-align: center;
-  }
-  #donate:visited {
- color: lightblue;
-  }
-  #donate:hover {
-    color: purple;
-  }
-  .donate_and_help_kids{
-      text-align: center;
-      text-weight: 20;
-      color: white;
-  }
-  #donate{
-    text-align: center;
-  }
-.doomscroll{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-  
-  /* Crucial: Smoothly transition the opacity over 0.2 seconds */
-  transition: opacity 0.2s ease-out; 
-}
 </style>
 </head>
 
 <body>
-  <nav class="doomscroll">
-    <ul class="sidebar">
-      <li><a href="index.html" id="logo"><img src="https://uploads.onecompiler.io/444rnfvys/444uvsynq/cropped-Kid-Your-Confidence-32x32.jpg" alt="">Kid Your Confidence</a></li>
+  <nav>
+    <ul>
+      <li><a href="index.html">Kid Your Confidence</a></li>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-  <h1 class="big">
-    <span class="yellow">Confident</span> <span class="blue">Today</span>,
-    <span class="red">Leaders</span> <span class="yellow">Tomorrow</span>
-  </h1>
-  <p class="center">
-    "Kid Your Confidence" is a youth-led nonprofit organization dedicated to uplifting underprivileged children through
-    creative programs, hands-on empowerment, and educational support that inspire self-belief and personal growth.
-  </p>
-  <section class="orange">
-    <p>
-      At Kid Your Confidence, we're proud of the difference we're making
-      in the lives of children and families in our community. Our
-      innovative confidence-building kits and mentorship programs have
-      reached hundreds of young people, inspiring them to believe in
-      themselves and pursue their dreams.
-    </p>
-    <a href="services.html" class="button">Learn More</a>
-  </section>
-  <section class="orange-2">
-    <h1 class="white-2">
-      Empowering
-    </h1>
-    <p class="impact-letter">
-      <span id="impact">Impact</span>
-    </p>
-  </section>
-  <section id="light-blue-section">
-    <div class="impact-content">
-      <p class="impact-text">
-        Through our tailored confidence-building programs, mentorship initiatives, and creative workshops, we create
-        safe spaces where children can explore their potential, express themselves freely, and develop the resilience
-        needed to overcome challenges. Each child leaves our programs with increased self-awareness, a stronger sense
-        of purpose, and the tools to build and maintain healthy relationships.
-      </p>
-      <div class="numbers">
-        <div class="number-item">
-          <p class="px">500+</p>
-          <p class="label">Children Impacted</p>
-        </div>
-        <div class="number-item">
-          <p class="px">100%</p>
-          <p class="label">Satisfaction Rate</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="red-2">
-    <h1 class="white">
-      Ready to Transform Lives?
-    </h1>
-    <p>
-      Join the movement. Whether you're a partner, volunteer, or supporter, your involvement makes a difference. Let's build
-      a future where every child believes in themselves.
-    </p>
-    <a href="contact.html" class="button">Get Involved</a>
-  </section>
-  <section class="founder-section">
-    <div class="founder-container">
-      <div class="founder-image-column">
-        <img class="founder-image" src="https://uploads.onecompiler.io/444rnfvys/444uvsynq/cropped-Kid-Your-Confidence-32x32.jpg" alt="Founder Image">
-      </div>
-      <div class="founder-text-column">
-        <span class="subtitle">Our Founder</span>
-        <h2>Meet the Visionary Behind Kid Your Confidence</h2>
-        <p>
-          Our founder started this organization with a simple belief: every child deserves to feel confident and capable. With years of experience in youth empowerment and community development, they've built Kid Your Confidence into a beacon of hope for underprivileged children seeking to transform their lives.
-        </p>
-        <a href="about.html" class="btn-primary">Learn Our Story</a>
-      </div>
-    </div>
-  </section>
-  <section class="donate-section">
-    <h2 class="donate_and_help_kids">Every Contribution Helps! 💚</h2>
-    <p>Support our mission to empower underprivileged children. Your donation directly funds our confidence-building programs and mentorship initiatives.</p>
-    <a id="donate" href="donate.html" class="button">Donate Now</a>
-  </section>
-  <footer class="footer">
-    <p>&copy; 2024 Kid Your Confidence. All rights reserved.</p>
-  </footer>
+
+  <!-- Your page content goes here -->
+
 </body>
 
 </html>
