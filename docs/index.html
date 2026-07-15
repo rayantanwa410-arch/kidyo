@@ -1010,6 +1010,63 @@ footer {
     box-shadow: 0 12px 20px rgba(37, 99, 235, 0.2);
 }
 
+  .donate-section {
+    background: #ffefd5; /* soft peach */
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 20px;
+    color: #333;
+    font-family: "Comic Sans MS", "Fredoka One", sans-serif;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Cute doodle circles */
+.donate-section::before,
+.donate-section::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #ffb6c1; /* soft pink */
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.donate-section::before {
+    top: -20px;
+    left: -20px;
+}
+
+.donate-section::after {
+    bottom: -20px;
+    right: -20px;
+}
+
+.donate_and_help_kids {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff6f61; /* playful coral */
+}
+
+.donate-section a {
+    display: inline-block;
+    margin-top: 20px;
+    background: #ff6f61;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.donate-section a:hover {
+    background: #ff3b2e;
+    transform: scale(1.05);
+}
+
 </style>
 </head>
 
@@ -1073,10 +1130,8 @@ themselves and pursue their dreams.
   </div>
 </section>
 
-<section class="donate-section">
-  <h1 class="donate_and_help_kids">Support Kid Your Confidence</h1>
-  <p class="donate_and_help_kids">Your donation helps kids build confidence and creativity.</p>
-  <a href="https://givebutter.com/kid-your-confidence" style="text-align: center;">Donate to Kid Your Confidence!</a>
+<section class="donation-section">
+  <h1 class="donation">Your Donation Helps More Kids Gain Confidence!</h1>
 </section>
 
 <footer class="footer">
