@@ -1181,6 +1181,7 @@ themselves and pursue their dreams.
 </footer>
 
 <script>
+// Counter animation
 function animateCounter(element) {
     const target = +element.getAttribute("data-target");
     const duration = +element.getAttribute("data-duration") || 2000;
@@ -1202,7 +1203,19 @@ function animateCounter(element) {
     update();
 }
 
-document.querySelectorAll(".px").forEach(el => animateCounter(el));
+// Scroll trigger for orange-2 numbers
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains("counted")) {
+            entry.target.classList.add("counted");
+            animateCounter(entry.target);
+        }
+    });
+}, { threshold: 0.4 });
+
+// Attach observer to each number
+document.querySelectorAll(".px").forEach(el => observer.observe(el));
 </script>
+
 </body>
 </html>
