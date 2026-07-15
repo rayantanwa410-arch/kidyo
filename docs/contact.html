@@ -6325,34 +6325,33 @@ nav {
         </div>
     </div>
 </main>
-    <script>
+   <script>
 let lastScroll = 0;
 const nav = document.querySelector("nav");
 
+/* Hide/show nav on scroll */
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
 
   if (currentScroll > lastScroll && currentScroll > 50) {
-    // Scrolling DOWN → hide nav
-    nav.classList.add("hide");
+    nav.classList.add("hide");   // scrolling down → hide
   } else {
-    // Scrolling UP → show nav
-    nav.classList.remove("hide");
+    nav.classList.remove("hide"); // scrolling up → show
   }
 
   lastScroll = currentScroll;
 });
-        <script>
+
+/* Slider control for nav movement */
 const slider = document.getElementById("navSlider");
-const nav = document.querySelector("nav");
 
-slider.addEventListener("input", () => {
-  const value = slider.value;
+if (slider) {
+  slider.addEventListener("input", () => {
+    const value = slider.value;
+    nav.style.transform = `translateY(${value}px)`;
+  });
+}
+</script>
 
-  // Move nav up/down
-  nav.style.transform = `translateY(${value}px)`;
-});
-</script>
-</script>
 </body>
 </html>
